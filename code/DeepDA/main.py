@@ -20,11 +20,11 @@ def get_parser():
     parser.add("--seed", type=int, default=0)
     parser.add_argument('--num_workers', type=int, default=0)
     
-    # network related
+    # network related使用backbone resnet50 使用bottleneck
     parser.add_argument('--backbone', type=str, default='resnet50')
     parser.add_argument('--use_bottleneck', type=str2bool, default=True)
 
-    # data loading related
+    # data loading related  数据导入输入核心地址
     parser.add_argument('--data_dir', type=str, required=True)
     parser.add_argument('--src_domain', type=str, required=True)
     parser.add_argument('--tgt_domain', type=str, required=True)
